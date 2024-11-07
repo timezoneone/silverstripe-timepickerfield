@@ -33,7 +33,7 @@ class TimePickerField extends TimeField
     {
         $this->addExtraClass('timepicker')
              ->setAttribute('autocomplete', 'off')
-             ->setAttribute('data-jqueryuiconfig', Convert::array2json($this->timePickerConfig));
+             ->setAttribute('data-jqueryuiconfig', json_encode($this->timePickerConfig));
 
         Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
         Requirements::javascript('silverstripe/admin: thirdparty/jquery-ui-themes/smoothness/jquery-ui.css');
